@@ -13,7 +13,7 @@ Copyrights
 
 - img/logo.png
   - image by Cha_cha
-  - "tvN 즐거운이야기"가 적용되어 있습니다. 
+  - "tvN 즐거운이야기"가 적용되어 있습니다.  
     "tvN 즐거운이야기체"의 지적 재산권은 CJ E&M에 있습니다.
 
 - img/sample.png
