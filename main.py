@@ -186,6 +186,7 @@ class StartPage(MainFrame):
         texts = get_texts(5)
         imgs = get_images(5)
         urls = get_urls(3)
+        self.disable_menu_file()
         master.switch_frame(ResultPage, texts, imgs, urls)
 
 class ResultPage(MainFrame):
