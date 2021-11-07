@@ -1,6 +1,9 @@
 # Palette_2.0
  ### Python tkinter GUI Design
 
+For more information: ![click_here](https://denev6.github.io/palette2/)  
+
+
 Version
 
 - python: 3.9.7
