@@ -28,9 +28,9 @@ class App(Tk):
         ico_path = get_path("img\icon.ico")
         Tk.iconbitmap(self, ico_path)
         self._frame = None
-        self.switch_frame(IntroPage)
+        self.refresh_frame(IntroPage)
 
-    def switch_frame(self, frame, *parameters):
+    def refresh_frame(self, frame, *parameters):
         if self._frame is not None:
             self._frame.destroy()
         self._frame = frame(self, *parameters)
@@ -106,7 +106,7 @@ class IntroPage(MainFrame):
             image=photo_button,
             relief="flat",
             bg=self._bg,
-            command=lambda: master.switch_frame(StartPage),
+            command=lambda: master.refresh_frame(StartPage),
         )
         button.image = photo_button
         button.pack(ipadx=3, ipady=2)
@@ -265,7 +265,7 @@ class StartPage(MainFrame):
         imgs = get_images(5)
         urls = get_urls(3)
         self.disable_menu_file()
-        master.switch_frame(ResultPage, texts, imgs, urls)
+        master.refresh_frame(ResultPage, texts, imgs, urls)
 
 
 class ResultPage(MainFrame):
@@ -400,7 +400,7 @@ class ResultPage(MainFrame):
             width=width,
             height=height,
             activebackground=self._green,
-            command=lambda: master.switch_frame(OptionalPage, texts, imgs, urls),
+            command=lambda: master.refresh_frame(OptionalPage, texts, imgs, urls),
         )
         btn_right.image = photo_right
         btn_right.pack(side="right")
@@ -505,7 +505,7 @@ class OptionalPage(MainFrame):
             width=width_left,
             height=height_left,
             activebackground=self._bg,
-            command=lambda: master.switch_frame(ResultPage, texts, imgs, urls),
+            command=lambda: master.refresh_frame(ResultPage, texts, imgs, urls),
         )
         btn_right.image = photo_right
         btn_right.pack(side="right", padx=25, pady=20)
@@ -518,7 +518,7 @@ class OptionalPage(MainFrame):
         imgs = get_images(4)
         colors = get_colors(3)
         texts_ = get_Text_sample(15)
-        master.switch_frame(OptionResultPage, urls, texts, imgs, colors, texts_)
+        master.refresh_frame(OptionResultPage, urls, texts, imgs, colors, texts_)
 
 
 class OptionResultPage(MainFrame):
@@ -637,7 +637,7 @@ class OptionResultPage(MainFrame):
             width=width_left,
             height=height_left,
             activebackground=self._green,
-            command=lambda: master.switch_frame(OptionalPage, texts, imgs, urls),
+            command=lambda: master.refresh_frame(OptionalPage, texts, imgs, urls),
         )
         btn_quit.image = photo_quit
         btn_quit.pack(side="right")
