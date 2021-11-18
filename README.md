@@ -1,7 +1,7 @@
 # Palette_2.0
  ### Python tkinter GUI Design
 
-For more information: [click_here](https://denev6.github.io/palette2/)  
+For more information: [click_here](https://denev6.github.io/palette2/) (ko)  
 
 
 Version
@@ -27,7 +27,7 @@ Copyrights
 
 Theme colors
 
-- #ffffff
+- #FFFFFF
 - #349E71
 - #CDEFE0
 - #FEDF51

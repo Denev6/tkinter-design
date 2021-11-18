@@ -1,7 +1,6 @@
-'''Project Palette
+"""Project Palette
 datas for palette project
-'''
+"""
 
-sample = {
-  'key' : 'value'
-}
+sample = {"key": "value"}
+
