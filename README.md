@@ -1,7 +1,7 @@
 # Palette_2.0
  ### Python tkinter GUI Design
 
-For more information: [click_here](https://denev6.github.io/palette2/) ("ko")  
+For more information: [("ko")](https://denev6.github.io/palette2/)  
 
 
 Version
@@ -23,7 +23,7 @@ Copyrights & Licenses
   - Photo by DeneV
 
 - img/icon/*.png
-  - (c) 2013-2017 Cole Bemis, The MIT License
+  - (c) 2013-2017 [Cole Bemis](https://github.com/feathericons/feather), The MIT License
 
 Theme colors
 
