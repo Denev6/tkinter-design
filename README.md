@@ -1,7 +1,7 @@
 # Palette_2.0
  ### Python tkinter GUI Design
 
-For more information: [("ko")](https://denev6.github.io/palette2/)  
+For more information: ["ko"](https://denev6.github.io/palette2/)  
 
 
 Version
