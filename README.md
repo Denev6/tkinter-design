@@ -34,14 +34,14 @@ For more information: ["ko"](https://denev6.github.io/palette2/)
 
 # Example
 
-![intro page](/preview/intropage.png){: .align-center}  
-![start page](/preview/startpage.png){: .align-center}  
-![menuabar](/preview/menubar.png){: .align-center}  
-![combo box](/preview/combobox.png){: .align-center}  
-![info page](/preview/infopage.png){: .align-center}  
-![result page](/preview/resultpage.png){: .align-center}  
-![img page](/preview/imgpage.png){: .align-center}  
-![optional page](/preview/optionalpage.png){: .align-center}  
-![balloon](/preview/balloon.png){: .align-center}  
-![color page](/preview/color.png){: .align-center}  
-![url](/preview/url.png){: .align-center}  
+![intro page](/preview/intropage.png)  
+![start page](/preview/startpage.png)  
+![menuabar](/preview/menubar.png)  
+![combo box](/preview/combobox.png)   
+![info page](/preview/infopage.png)  
+![result page](/preview/resultpage.png)  
+![img page](/preview/imgpage.png)  
+![optional page](/preview/optionalpage.png)  
+![balloon](/preview/balloon.png)  
+![color page](/preview/color.png)   
+![url](/preview/url.png)  
