@@ -1,10 +1,10 @@
 # Palette_2.0
- ### Python tkinter GUI Design
+**Python tkinter GUI Design**
 
 For more information: ["ko"](https://denev6.github.io/palette2/)  
 
 
-Version
+# Version
 
 - python: 3.9.7
 - bs4: 4.10.0
@@ -12,7 +12,7 @@ Version
 - pillow: 8.4.0
 - requests: 2.26.0
 
-Copyrights & Licenses
+# Copyrights & Licenses
 
 - img/logo.png
   - Image by Cha_cha
@@ -25,9 +25,20 @@ Copyrights & Licenses
 - img/icon/*.png
   - (c) 2013-2017 [Cole Bemis](https://github.com/feathericons/feather), The MIT License
 
-Theme colors
+# Theme colors
 
 - #FFFFFF
 - #349E71
 - #CDEFE0
 - #FEDF51
+
+# Example
+![intro page](/assets/palette2/intropage.png)
+![start page](/assets/palette2/startpage.png)
+![combo box](/assets/palette2/combobox.png)
+![info page](/assets/palette2/infopage.png)
+![result page](/assets/palette2/resultpage.png)
+![img page](/assets/palette2/imgpage.png)
+![optional page](/assets/palette2/optionalpage.png)
+![balloon](/assets/palette2/balloon.png)
+![color page](/assets/palette2/color.png)
