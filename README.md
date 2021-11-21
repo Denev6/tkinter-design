@@ -32,7 +32,7 @@ For more information: ["ko"](https://denev6.github.io/palette2/)
 - #CDEFE0
 - #FEDF51
 
-# Example
+# Preview
 
 ![intro page](/preview/intropage.png)  
 ![start page](/preview/startpage.png)
