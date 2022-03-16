@@ -138,7 +138,7 @@ def crawl_naver_datalab():
     return text
 
 
-"""Functions only for test GUI"""
+"""Functions only for the test"""
 
 
 def get_texts(num):
