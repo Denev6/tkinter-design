@@ -124,11 +124,9 @@ def crawl_naver_datalab():
             datetime = container.select_one("strong > span").get_text()
             items = container.select("div > ul.rank_list > li > a > span.title")
             text = "  < Word list >\n\n"
-            i = 1
-            for item in items:
+            for i, item in enumerate(items):
                 item = item.get_text()
-                text += f"     {i}. {item}\n"
-                i += 1
+                text += f"     {i + 1}. {item}\n"
         else:
             text = f"\nFail to connect to the server.\nHTTP status code: {response.status_code}"
         text += f"\n  {datetime}\n  © NAVER Corp. All Rights Reserved."
