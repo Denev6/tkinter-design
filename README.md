@@ -9,7 +9,7 @@ For more information: ["ko"](https://denev6.github.io/palette2/)
 - python: 3.9.7
 - bs4: 4.10.0
 - pandas: 1.3.4
-- pillow: 8.4.0
+- pillow: 8.4.0 (Updated to 9.0.1)
 - requests: 2.26.0
 
 # Copyrights & Licenses
