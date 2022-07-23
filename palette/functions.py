@@ -8,10 +8,7 @@ import tkinter.messagebox as msgbox
 import os
 import webbrowser
 
-from bs4 import BeautifulSoup
-import pandas as pd
 from PIL import Image
-import requests
 
 if __name__ == "__main__":
     from data import *
@@ -43,13 +40,13 @@ def save_new_csv(entry_1, entry_2, entry_3):
     if filename == "":
         return
     else:
-        data = {
-            "FEATURE_1": entry_1.get(),
-            "FEATURE_2": entry_2.get(),
-            "FEATURE_3": entry_3.get(),
-        }
-        df = pd.DataFrame(data, index=[0])
-        df.to_csv(filename, index=False, encoding="utf-8")
+        data = [
+            entry_1.get(),
+            entry_2.get(),
+            entry_3.get(),
+        ]
+        with open(filename, "w", encoding="utf-8") as csv:
+            csv.write(",".join(data))
 
 
 def open_csv(entry_1, entry_2, entry_3):
@@ -68,14 +65,18 @@ def open_csv(entry_1, entry_2, entry_3):
             entry_2.delete(0, END)
             entry_3.delete(0, END)
             try:
-                df = pd.read_csv(filename, nrows=1)
-                values = df.iloc[0, 0:3]
-                entry_1.insert(0, values[0])
-                entry_2.insert(0, values[1])
-                entry_3.insert(0, values[2])
-            except:
+                with open(filename, "r", encoding="utf-8") as csv:
+                    values = csv.read().split(",")
+                    entry_1.insert(0, values[0])
+                    entry_2.insert(0, values[1])
+                    entry_3.insert(0, values[2])
+            except IndexError:
                 msgbox.showwarning(
-                    "Error", "The file is corrupted \nPlease try other files.",
+                    "Error", "Not enough data. \nPlease try other files.",
+                )
+            except Exception:
+                msgbox.showwarning(
+                    "Error", "The file is corrupted. \nPlease try other files.",
                 )
         else:
             msgbox.showerror("Error", "Unable to find the file!")
@@ -97,43 +98,6 @@ def get_img(img_file_name, folder=None, extension="png"):
 def show_ImgPage(class_name, master, *parameters):
     """class_name = ImgPage"""
     return class_name(master, *parameters)
-
-
-def crawl_naver_datalab():
-    """
-    datalab.naver.com/robots.txt
-    (21/11/05)
-    User-Agent: *
-    Allow: /$
-    Allow: /index.naver
-    Disallow: /
-    """
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36"
-    }
-    url = "https://datalab.naver.com/index.naver"
-    try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            html = response.text
-            soup = BeautifulSoup(html, "html.parser")
-
-            container = soup.select_one(
-                "#content > div.spot.section_keyword > div.home_section.active > div > div.keyword_carousel > div > div > div:nth-child(12) > div"
-            )
-            datetime = container.select_one("strong > span").get_text()
-            items = container.select("div > ul.rank_list > li > a > span.title")
-            text = "  < Word list >\n\n"
-            for i, item in enumerate(items):
-                item = item.get_text()
-                text += f"     {i + 1}. {item}\n"
-        else:
-            text = f"\nFail to connect to the server.\nHTTP status code: {response.status_code}"
-        text += f"\n  {datetime}\n  © NAVER Corp. All Rights Reserved."
-    except:
-        text = "\n {Put your Exception message}"
-
-    return text
 
 
 """Functions only for the test"""
@@ -166,7 +130,7 @@ def get_images(num):
 
 def get_urls(num):
     """get sample urls
-       : https://fpalette.netlify.app/
+       : https://denev6.tistory.com/
     
     Args:
         num(int): number of urls to return
@@ -174,7 +138,7 @@ def get_urls(num):
     Returns:
         list: list of sample urls    
     """
-    url = "https://fpalette.netlify.app/"
+    url = "https://denev6.tistory.com/"
     return [url for i in range(num)]
 
 

@@ -2,10 +2,7 @@
 
 - version -
 python=3.9.7
-bs4=4.10.0
-pandas=1.3.4
 pillow=8.4.0
-requests=2.26.0
 
 code by DeneV
 """
@@ -45,7 +42,6 @@ class MainFrame(Frame):
         self._green = "#349E71"
         self._green2 = "#CDEFE0"
         self.pack(fill="both", expand=True)
-        self._trend_text = crawl_naver_datalab()
         style = ttk.Style()
         style.theme_use("clam")
         style.map("TCombobox", fieldbackground=[("readonly", "#ffffff")])
@@ -385,7 +381,7 @@ class ResultPage(MainFrame):
         f_text.pack(side="left", fill="both")
         scrollbar.config(command=f_text.yview)
         f_text.delete(1.0, END)
-        f_text.insert(1.0, self._trend_text)
+        f_text.insert(1.0, "- Sample -")
         f_text.configure(state="disabled")
         f_btn = Frame(self, bg=self._green)
         f_btn.pack(side="bottom", fill="x", expand=True, padx=30)

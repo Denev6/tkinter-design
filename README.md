@@ -1,16 +1,13 @@
 # Palette_2.0
 **Python tkinter GUI Design**
 
-For more information: ["ko"](https://denev6.tistory.com/entry/Palette-20)  
+For more information: ["ko"](https://denev6.tistory.com/entry/tkinter-palette)  
 
 
 # Version
 
 - python: 3.9.7
-- bs4: 4.10.0
-- pandas: 1.3.4
 - pillow: 8.4.0 (Updated to 9.0.1)
-- requests: 2.26.0
 
 # Copyrights & Licenses
 
@@ -24,13 +21,6 @@ For more information: ["ko"](https://denev6.tistory.com/entry/Palette-20)
 
 - img/icon/*.png
   - (c) 2013-2017 [Cole Bemis](https://github.com/feathericons/feather), The MIT License
-
-# Theme colors
-
-- #FFFFFF
-- #349E71
-- #CDEFE0
-- #FEDF51
 
 # Preview
 
